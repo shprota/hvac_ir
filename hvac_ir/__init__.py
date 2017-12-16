@@ -18,7 +18,7 @@ class ACProtocol:
     MODE_HEAT = 'heat'
     MODE_COOL = 'cool'
     MODE_DRY = 'dry'
-    MODE_FAN = 'fan_only'
+    MODE_FAN = 'fan'
 
     # Fan speeds. Note that some heatpumps have less than 5 fan speeds
     FAN_AUTO = 'auto'

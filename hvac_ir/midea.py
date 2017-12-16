@@ -61,7 +61,7 @@ class Midea(ACProtocol):
         fan_speed = self.fan_speeds.get(fan_speed_cmd, self.MIDEA_AIRCON1_FAN_AUTO)
         temperature = 23
         if 16 < temperature_cmd < 31:
-            temperature = self.temperatures[(temperature - 17)]
+            temperature = self.temperatures[(temperature_cmd - 17)]
         self.send_midea(operating_mode, fan_speed, temperature)
 
     def send_midea(self, operating_mode, fan_speed, temperature):

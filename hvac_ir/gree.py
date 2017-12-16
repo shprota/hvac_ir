@@ -125,6 +125,7 @@ class Gree(ACProtocol):
         temperature = 23
         if 15 < temperature_cmd < 31:
             temperature = temperature_cmd - 16
+        self.durations = []
         self.send_gree(power_mode, operating_mode, fan_speed, temperature, swing, swing_v, swing_h,
                        turbo_mode)
 
