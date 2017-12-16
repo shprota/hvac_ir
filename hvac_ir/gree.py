@@ -102,6 +102,18 @@ class Gree(ACProtocol):
     def __init__(self):
         ACProtocol.__init__(self)
 
+    @classmethod
+    def list_modes(cls):
+        return list(cls.op_modes)
+
+    @classmethod
+    def list_fan_speeds(cls):
+        return list(cls.fan_speeds)
+
+    @classmethod
+    def list_swing_modes(cls):
+        return list(cls.swing_v_map)
+
     def send(self, power_mode_cmd, operating_mode_cmd, fan_speed_cmd, temperature_cmd, swing_v_cmd, swing_h_cmd,
              turbo_mode=False):
         power_mode = self.GREE_POWER_ON if power_mode_cmd == self.POWER_ON else self.GREE_POWER_OFF

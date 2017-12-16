@@ -45,6 +45,14 @@ class Midea(ACProtocol):
     def __init__(self):
         ACProtocol.__init__(self)
 
+    @classmethod
+    def list_modes(cls):
+        return list(cls.op_modes)
+
+    @classmethod
+    def list_fan_speeds(cls):
+        return list(cls.fan_speeds)
+
     # noinspection PyUnusedLocal
     def send(self, power_mode_cmd, operating_mode_cmd, fan_speed_cmd, temperature_cmd, swing_v_cmd, swing_h_cmd,
              turbo_cmd=False):

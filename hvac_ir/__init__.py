@@ -55,6 +55,21 @@ class ACProtocol:
         self.durations = []
 
     @classmethod
+    def list_modes(cls):
+        return list()
+
+    @classmethod
+    def list_fan_speeds(cls):
+        return list()
+
+    @classmethod
+    def list_swing_modes(cls):
+        return list()
+
+    def get_durations(self):
+        return self.durations
+
+    @classmethod
     def is_swing(cls, vdir, hdir=HDIR_AUTO):
         return vdir in [cls.VDIR_SWING, cls.VDIR_SWING_DOWN, cls.VDIR_SWING_MIDDLE, cls.VDIR_SWING_UP] or \
                hdir in [cls.HDIR_SWING, cls.HDIR_SWING_SPREAD]
