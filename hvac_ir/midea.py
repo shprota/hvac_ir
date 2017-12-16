@@ -62,6 +62,7 @@ class Midea(ACProtocol):
         temperature = 23
         if 16 < temperature_cmd < 31:
             temperature = self.temperatures[(temperature_cmd - 17)]
+        self.durations = []
         self.send_midea(operating_mode, fan_speed, temperature)
 
     def send_midea(self, operating_mode, fan_speed, temperature):
