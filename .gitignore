@@ -1,0 +1,5 @@
+.idea
+*.pyc
+venv
+hvac_ir.egg-info
+*.egg
