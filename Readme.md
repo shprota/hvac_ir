@@ -6,6 +6,8 @@ Currently supported devices:
 
 * Midea (Electra, etc.)
 * Gree (Tadiran, Hyunday, etc.) YAG1FB remote (others may also work)
+* Daikin (two models)
+* Carrier (two models)
 
 ## Example usage:
 
@@ -19,5 +21,9 @@ if Sender is None:
 my_ac = Sender()
 my_ac.send(Sender.POWER_OFF, Sender.MODE_HEAT, Sender.FAN_AUTO, 24, Sender.VDIR_SWING_DOWN,
        Sender.HDIR_SWING, False)
-durations = my_ac.durations
+durations = my_ac.get_durations()
+
+my_ir_sender.transmit(durations)
 ```
+
+Example for sending codes via Broadlink controller in in the examples folder

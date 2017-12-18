@@ -27,6 +27,15 @@ def convert_bl(durations):
     return result
 
 
+def format_durations(data):
+    result = ''
+    for i in range(0, len(data)):
+        if len(result) > 0:
+            result += ' '
+        result += ('+' if i % 2 == 0 else '-') + str(data[i])
+    return result
+
+
 if __name__ == '__main__':
     Sender = hvac_ir.get_sender('daikin2')
     if Sender is None:
@@ -35,10 +44,17 @@ if __name__ == '__main__':
     g = Sender()
     g.send(Sender.POWER_OFF, Sender.MODE_HEAT, Sender.FAN_AUTO, 24, Sender.VDIR_SWING_DOWN,
            Sender.HDIR_SWING, False)
-    s = g.durations
-    bl = convert_bl(s)
-    print(binascii.b2a_hex(bl))
-    # mac = binascii.unhexlify("B4430DC30B2B".encode().replace(b':', b''))
-    # dev = broadlink.rm(("192.168.0.10", 80), mac)
+    durations = g.get_durations()
+    print(format_durations(durations))
+
+    # Uncommend the following to send code over Broadlink:
+
+    # BROADLINK_IP = '192.168.0.10'
+    # BROADLINK_MAC = 'B4:43:0D:C3:0B:2B'
+    #
+    # bl = convert_bl(durations)
+    # print(binascii.b2a_hex(bl))
+    # mac = binascii.unhexlify(BROADLINK_MAC.encode().replace(b':', b''))
+    # dev = broadlink.rm((BROADLINK_IP, 80), mac)
     # dev.auth()
     # dev.send_data(bl)
