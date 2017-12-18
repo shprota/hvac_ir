@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='hvac-ir',
-      version='0.3',
+      version='0.4',
       description='Air conditioner control code generator',
       url='http://github.com/shprota/hvac_ir',
       author='Shprota',
@@ -20,7 +20,7 @@ setup(name='hvac-ir',
           'Programming Language :: Python :: 3.6',
           'Programming Language :: Python :: 3.7',
       ],
-      keywords='airconditioner hvac ac control ir infrared heatpump midea gree',
+      keywords='airconditioner hvac ac control ir infrared heatpump midea gree daikin carrier',
       packages=['hvac_ir'],
       install_requires=[
       ],

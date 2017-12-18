@@ -9,6 +9,12 @@ Currently supported devices:
 * Daikin (two models)
 * Carrier (two models)
 
+## Install
+
+```bash
+pip install hvac_ir
+```
+
 ## Example usage:
 
 ```python
@@ -26,4 +32,4 @@ durations = my_ac.get_durations()
 my_ir_sender.transmit(durations)
 ```
 
-Example for sending codes via Broadlink controller in in the examples folder
+Example for sending codes via Broadlink controller is in the examples folder
