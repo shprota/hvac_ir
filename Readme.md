@@ -8,6 +8,7 @@ Currently supported devices:
 * Gree (Tadiran, Hyunday, etc.) YAG1FB remote (others may also work)
 * Daikin (two models)
 * Carrier (two models)
+* Fuego
 
 ## Install
 

@@ -37,7 +37,7 @@ def format_durations(data):
 
 
 if __name__ == '__main__':
-    Sender = hvac_ir.get_sender('daikin2')
+    Sender = hvac_ir.get_sender('fuego')
     if Sender is None:
         print("Unknown sender")
         exit(2)
