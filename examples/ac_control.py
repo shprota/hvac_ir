@@ -28,7 +28,7 @@ def convert_bl(durations):
 
 
 if __name__ == '__main__':
-    Sender = hvac_ir.get_sender('gree')
+    Sender = hvac_ir.get_sender('daikin2')
     if Sender is None:
         print("Unknown sender")
         exit(2)
@@ -38,7 +38,7 @@ if __name__ == '__main__':
     s = g.durations
     bl = convert_bl(s)
     print(binascii.b2a_hex(bl))
-    mac = binascii.unhexlify("B4430DC30B2B".encode().replace(b':', b''))
-    dev = broadlink.rm(("192.168.0.10", 80), mac)
-    dev.auth()
-    dev.send_data(bl)
+    # mac = binascii.unhexlify("B4430DC30B2B".encode().replace(b':', b''))
+    # dev = broadlink.rm(("192.168.0.10", 80), mac)
+    # dev.auth()
+    # dev.send_data(bl)

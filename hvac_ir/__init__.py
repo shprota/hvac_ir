@@ -25,6 +25,8 @@ class ACProtocol:
     FAN_1 = 'low'
     FAN_2 = 'medium'
     FAN_3 = 'high'
+    FAN_4 = 'higher'
+    FAN_5 = 'highest'
 
     # Vertical air directions. Note that these cannot be set on all heat pumps
     VDIR_AUTO = 'auto'
