@@ -3,3 +3,4 @@
 venv
 hvac_ir.egg-info
 *.egg
+dist

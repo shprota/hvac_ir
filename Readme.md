@@ -1,6 +1,6 @@
 # hvac-ir
 
-This is a python port of the great [Arduino heapumpir library](https://github.com/ToniA/arduino-heatpumpir) by ToniA
+This is a python port of the great [Arduino heatpumpir library](https://github.com/ToniA/arduino-heatpumpir) by ToniA
 
 Currently supported devices:
 
