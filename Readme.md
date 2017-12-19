@@ -9,6 +9,10 @@ Currently supported devices:
 * Daikin (two models)
 * Carrier (two models)
 * Fuego
+* Fujitsu
+* Hisense
+* Hitachi
+* Hyundai
 
 ## Install
 

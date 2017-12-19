@@ -1,6 +1,6 @@
 import hvac_ir
 import binascii
-import broadlink
+#import broadlink
 
 TICK = 32.6
 IR_TOKEN = 0x26
@@ -37,12 +37,12 @@ def format_durations(data):
 
 
 if __name__ == '__main__':
-    Sender = hvac_ir.get_sender('fuego')
+    Sender = hvac_ir.get_sender('hyundai')
     if Sender is None:
         print("Unknown sender")
         exit(2)
     g = Sender()
-    g.send(Sender.POWER_OFF, Sender.MODE_HEAT, Sender.FAN_AUTO, 24, Sender.VDIR_SWING_DOWN,
+    g.send(Sender.POWER_ON, Sender.MODE_HEAT, Sender.FAN_AUTO, 24, Sender.VDIR_SWING_DOWN,
            Sender.HDIR_SWING, False)
     durations = g.get_durations()
     print(format_durations(durations))
