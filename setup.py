@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='hvac-ir',
-      version='0.6',
+      version='0.7',
       description='Air conditioner control code generator',
       url='http://github.com/shprota/hvac_ir',
       author='Shprota',
