@@ -72,7 +72,7 @@ class Midea(ACProtocol):
             if operating_mode == self.MIDEA_AIRCON1_MODE_FAN:
                 send_buffer[2] = self.MIDEA_AIRCON1_MODE_DRY | 0x07
             else:
-                send_buffer[2] = operating_mode | self.temperatures[(temperature - 17)]
+                send_buffer[2] = operating_mode | temperature
         return self.send_midea_raw(send_buffer)
 
     def send_midea_raw(self, send_buffer):
